@@ -11,10 +11,10 @@ import (
 )
 
 func init() {
-	rootCmd.AddCommand(versionCmd)
+	rootCmd.AddCommand(traceCmd)
 }
 
-var versionCmd = &cobra.Command{
+var traceCmd = &cobra.Command{
 	Use:   "trace",
 	Short: "Trace the IP address",
 	Long:  `Trace the IP address.`,
