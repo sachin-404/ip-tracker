@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"net"
 	"net/http"
 
 	"github.com/fatih/color"
@@ -41,6 +42,13 @@ type Ip struct {
 }
 
 func showData(ip string) {
+	if net.ParseIP(ip) == nil {
+		c := color.New(color.FgRed)
+		c.Print("Error: ")
+		fmt.Println("Please provide a valid IP address")
+		return
+	}
+
 	url := "https://ipinfo.io/" + ip + "/geo"
 	responseByte := getData(url)
 
