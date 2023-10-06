@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
 
@@ -49,7 +50,8 @@ func showData(ip string) {
 	if err != nil {
 		fmt.Println("Unable to unmarshal the response.")
 	}
-	fmt.Println("Data Fetched Successfully")
+	c := color.New(color.FgMagenta)
+	c.Println("Data Fetched Successfully 🎉 🎉")
 	fmt.Printf("IP: %s\nCity: %s\nRegion: %s\nCountry: %s\nLocation: %s\nTimezone: %s\nOrganization: %s\nPostal: %s\n", data.IP, data.City, data.Region, data.Country, data.Location, data.Timezone, data.Org, data.Postal)
 }
 
