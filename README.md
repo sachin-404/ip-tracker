@@ -6,4 +6,4 @@
     ```
     iptracker trace <IP address>
     ```
-
+![Screenshot from 2024-03-06 02-50-12](https://github.com/sachin-404/iptracker/assets/96824004/f868a849-bbe5-4a2a-9e5e-579aedd63ace)
